@@ -52,13 +52,6 @@ public class ApplicationBase64 {
         }
     }
 
-    /*
-        public void helpShow() {
-            formatter.printHelp("help", posixOptions);
-            System.out.println(HELP_TEXT);
-        }
-        */
-
     static private InputStream chooseInputStream(String fileName) throws FileNotFoundException {
         return (fileName == null ? System.in : new FileInputStream(fileName));
     }
@@ -95,11 +88,5 @@ public class ApplicationBase64 {
         } catch (Exception exp) {
             System.err.println("\n" + "Error: " + exp.getMessage());
         }
-        /*byte u = -80,i,p,o;
-        o = (byte)(u >> 2);
-        //i = (byte)((u >> 2) | ((u >> 2) ^ -128) );
-        i = (byte) ((u >> 2) -96);
-        p =  (byte)(o ^ (-128 >> 1));
-        System.out.println((byte)(1 << 7));*/
     }
 }
